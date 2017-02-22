@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import App from './app/root';
+
 export default class FuturesNiuApp extends Component {
   render() {
     return (
@@ -50,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('FuturesNiuApp', () => FuturesNiuApp);
+AppRegistry.registerComponent('FuturesNiuApp', () => App);
