@@ -19,6 +19,7 @@ export default class FuturesNiuApp extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <Text>YuanXJ</Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
         </Text>
