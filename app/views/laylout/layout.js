@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Navigator, View} from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
-import HomeView from '../home';
-import StrategyView from '../strategy';
-import MineView from '../Mine';
+import HomeView from '../home/home';
+import StrategyView from '../strategy/strategy';
+import MineView from '../mine/mine';
 
 export default class Layout extends React.Component {
   constructor(arg) {
@@ -14,7 +14,8 @@ export default class Layout extends React.Component {
     };
   }
   render() {
-    reutrn(
+    console.log(1);
+    return (
       <TabNavigator>
         <TabNavigator.Item
           selected={this.setSelected('home')}
@@ -39,10 +40,10 @@ export default class Layout extends React.Component {
   }
 
   setSelected = (name) => {
-    reutrn this.state.currentTab === name;
+    return this.state.currentTab === name;
   }
 
-  switchTab = (currentTab = '') {
+  switchTab = (currentTab = '') => {
     this.setState({currentTab});
   }
 

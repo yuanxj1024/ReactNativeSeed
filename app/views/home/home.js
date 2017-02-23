@@ -1,10 +1,12 @@
 import React from 'react';
-import {StyleSheet, Navigator, View} from 'react-native';
+import {StyleSheet, Navigator, Text, View} from 'react-native';
+
+import BasicStyle from '../../styles/basic';
 
 export default class Home extends React.Component {
   render() {
     return (
-      <View>
+      <View style={BasicStyle.container}>
         <Text>
           Home page
         </Text>
