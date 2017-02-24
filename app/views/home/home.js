@@ -11,14 +11,14 @@ import {
 
 import BasicStyle from '../../styles/basic';
 
-import Banner from './banner';
+import Top from './top';
 
 class Home extends React.Component {
   render() {
     const styles = this.props.style;
     return (
       <View style={[BasicStyle.content]}>
-        <Banner></Banner>
+        <Top/>
       </View>
     );
   }

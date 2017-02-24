@@ -1,17 +1,37 @@
+/**
+ * banner轮播
+ */
 import React from 'react';
-import {StyleSheet, Image, View, Text, TextInput} from 'react-native';
+import {StyleSheet, Image, View, Dimensions} from 'react-native';
+import Swiper from 'react-native-swiper';
 
-import BasicStyle from '../../styles/basic';
+const {width} = Dimensions.get('window');
+
+const Slide = (props) => {
+  return (
+    <View style={styles.slide}>
+      <Image
+        resizeMode={'cover'}
+        source={{
+        uri: props.uri
+      }}
+        style={styles.image}></Image>
+    </View>
+  );
+};
 
 export default class Banner extends React.Component {
   constructor(arg) {
     super(arg);
     this.state = {
-      ads: [
+      imgList: [
         {
-          title: '',
-          url: '',
+          title: '1',
+          url: 'https://h5.niuguwang.com/huodong/wechat/live/img/bg_text_chat.png',
           time: ''
+        }, {
+          title: '2',
+          url: 'https://h5.niuguwang.com/huodong/16Y12M/double12/img/bg.png'
         }
       ]
     };
@@ -19,69 +39,28 @@ export default class Banner extends React.Component {
 
   render() {
     return (
-      <View style={styles.content}>
-        <View style={[styles.search]}>
-          <Image style={styles.searchBg} source={require('./img/searchbg@3x.png')}></Image>
-          <View style={[BasicStyle.flexRow, styles.searchBar]}>
-            <View style={[styles.searchIcon]}>
-              <Image source={require('./img/icon-search@3x.png')}></Image>
-            </View>
-            <View>
-              <Text style={BasicStyle.white}>搜索股票、基金、牛人</Text>
-            </View>
-          </View>
-        </View>
-        <View>
-          <View></View>
-          <View style={[styles.bannerTab]}>
-            <View>
-              <Image source={require('./img/kefu@3x.png')}></Image>
-              <Text>在线客服</Text>
-            </View>
-            <View>
-              <Image source={require('./img/kefu@3x.png')}></Image>
-              <Text>在线客服</Text>
-            </View>
-          </View>
-        </View>
+      <View>
+        <Swiper loadMinimal loop={false} height={158}>
+          {this
+            .state
+            .imgList
+            .map((item) => <Slide key={item.title} uri={item.url}/>)
+}
+        </Swiper>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  content: {
-    backgroundColor: 'gray'
-  },
-  search: {
-    // flex: 1, flexDirection: 'row',
-    padding: 10,
-    marginTop: 10,
-    marginLeft: 15,
-    marginRight: 15,
-    height: 30,
-    // backgroundColor: 'red' lineHeight: 30
-  },
-  searchBg: {
-    position: 'absolute',
-    resizeMode: 'stretch',
+  slide: {
     flex: 1,
-    height: 30,
-    left: 0,
-    right: 0,
-    // marginLeft: 15, marginRight: 15
-  },
-  searchBar: {
-    justifyContent: 'flex-start'
-  },
-  searchIcon: {
-    width: 20
-  },
-  bannerTab: {
-    // flex: 1,
-    flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor: 'transparent'
   },
-  bannerTabItem: {}
+  image: {
+    width,
+    flex: 1,
+    backgroundColor: 'transparent'
+  }
 });

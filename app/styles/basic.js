@@ -13,12 +13,22 @@ const Basic = StyleSheet.create({
   radius15: {
     borderRadius: 15
   },
+  flex: {
+    flex: 1
+  },
   flexRow: {
     flex: 1,
     flexDirection: 'row'
   },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   white: {
     color: '#fff'
+  },
+  bgWhite: {
+    backgroundColor: '#fff'
   }
 });
 
