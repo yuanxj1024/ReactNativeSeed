@@ -6,6 +6,19 @@ const Basic = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  content: {
+    paddingTop: 15
+  },
+  radius15: {
+    borderRadius: 15
+  },
+  flexRow: {
+    flex: 1,
+    flexDirection: 'row'
+  },
+  white: {
+    color: '#fff'
   }
 });
 
