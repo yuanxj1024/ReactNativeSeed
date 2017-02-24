@@ -1,16 +1,46 @@
 import React from 'react';
 import {StyleSheet, Navigator, Text, View} from 'react-native';
+import {
+  Container,
+  Content,
+  Header,
+  StyleProvider,
+  Button,
+  connectStyle
+} from 'native-base';
 
 import BasicStyle from '../../styles/basic';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   render() {
+    const styles = this.props.style;
+    console.log('styles', styles);
     return (
       <View style={BasicStyle.container}>
-        <Text>
-          Home page
-        </Text>
+        <View>
+          <Text>
+            Home page2
+          </Text>
+        </View>
+        <View>
+          <Button success>
+            <Text>
+              Yuan XJss
+            </Text>
+          </Button>
+        </View>
       </View>
     );
   }
 }
+
+const styles = {
+  bg1: {
+    backgroundColor: 'red'
+  },
+  bg2: {
+    backgroundColor: 'blue'
+  }
+};
+
+export default connectStyle('home.styles', styles)(Home);

@@ -32,6 +32,7 @@ export default class App extends React.Component {
           component: Layout
         }}
           renderScene={this.renderScene}></Navigator>
+
       </Provider>
     );
   }
