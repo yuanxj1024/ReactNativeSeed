@@ -7,6 +7,7 @@ import {StyleSheet, Image, View, Text, TextInput} from 'react-native';
 import BasicStyle from '../../styles/basic';
 
 import Banner from './banner';
+import HotStock from './hot-stock';
 
 export default class Top extends React.Component {
   constructor(arg) {
@@ -45,6 +46,10 @@ export default class Top extends React.Component {
             </View>
           </View>
         </View>
+
+        {/**/}
+        <HotStock/>
+
       </View>
     );
   }

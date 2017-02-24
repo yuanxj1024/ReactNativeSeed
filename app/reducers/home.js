@@ -1,6 +1,11 @@
 import * as ActionTypes from '../constants/actionTypes';
 
-export default function (state = {}, action) => {
+const initState = {
+  homeHotStock: []
+};
+
+export default(state = initState, action) => {
+  console.log('reducers action', action);
   switch (action.type) {
     case ActionTypes.FETCH_HOME_BANNER:
       return Object.assign({}, state, action.data);
@@ -9,8 +14,10 @@ export default function (state = {}, action) => {
     case ActionTypes.FETCH_HOME_HOTSTOCK:
       const {loading, homeHotStock} = action.data;
       return Object.assign({}, state, {
-        homeHotStock: ...homeHotStock,
+        homeHotStock: [...homeHotStock],
         loading: false
       });
+    default:
+      return state;
   }
 };
