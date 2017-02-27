@@ -24,8 +24,17 @@ const Basic = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  flexRight: {
+    alignItems: 'flex-end'
+  },
   white: {
     color: '#fff'
+  },
+  color999: {
+    color: '#999999'
+  },
+  color666: {
+    color: '#666666'
   },
   bgWhite: {
     backgroundColor: '#fff'

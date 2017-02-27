@@ -11,6 +11,8 @@ import {
 import BasicStyle from '../../styles/basic';
 
 import Top from './top';
+import Notice from './notice';
+import HotBuy from './hot-buy';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -28,6 +30,8 @@ export default class Home extends React.Component {
             refreshing={this.state.refreshing}
             title="正在刷新..."/>
           <Top/>
+          <Notice/>
+          <HotBuy/>
         </ScrollView>
       </View>
     );
