@@ -19,27 +19,26 @@ class HotStock extends React.Component {
   }
 
   render() {
-    console.log(111, this);
     return (
-      <View style={[BasicStyle.flexRow, styles.wraper]}>
+      <View style={[BasicStyle.flexRow, BasicStyle.marginTop, BasicStyle.bgWhite]}>
         {this
           .props
           .homeHotStock
           .map((item) => {
             return (
-              <View style={[styles.item]} key={item}>
+              <View style={[styles.item, BasicStyle.flex, BasicStyle.center]} key={item}>
                 <View>
-                  <Text>乐视网</Text>
+                  <Text>乐视网{item}</Text>
                 </View>
-                <View>
-                  <Text>34.52</Text>
+                <View style={[styles.stockPercent]}>
+                  <Text style={[styles.redColor, BasicStyle.fontWeight]}>34.52</Text>
                 </View>
-                <View>
+                <View style={[BasicStyle.flex, BasicStyle.flexRow]}>
                   <View>
-                    <Text>+0.8%</Text>
+                    <Text style={[styles.greenColor]}>-0.8%</Text>
                   </View>
-                  <View>
-                    <Text>+0.2%</Text>
+                  <View style={[styles.stockSubPercent]}>
+                    <Text style={[styles.redColor]}>+0.2%</Text>
                   </View>
                 </View>
               </View>
@@ -54,11 +53,37 @@ class HotStock extends React.Component {
 
 const styles = StyleSheet.create({
   wraper: {
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    paddingTop: 10
   },
   item: {
-    height: 75
+    // height: 75, backgroundColor: 'red',
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+  itemSub: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  stockName: {
+    fontSize: 30,
+    color: '#000000'
+  },
+  stockPercent: {
+    marginTop: 12,
+    marginBottom: 5
+  },
+  stockSubPercent: {
+    marginLeft: 7
+  },
+  redColor: {
+    color: '#f36369'
+  },
+  greenColor: {
+    color: '#16ab16'
   }
+
 });
 
 function mapStateToProps(state) {

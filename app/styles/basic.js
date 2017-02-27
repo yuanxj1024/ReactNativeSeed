@@ -29,6 +29,12 @@ const Basic = StyleSheet.create({
   },
   bgWhite: {
     backgroundColor: '#fff'
+  },
+  marginTop: {
+    marginTop: 10
+  },
+  fontWeight: {
+    fontWeight: 'bold'
   }
 });
 

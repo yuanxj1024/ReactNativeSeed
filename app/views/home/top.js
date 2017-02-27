@@ -16,8 +16,8 @@ export default class Top extends React.Component {
 
   render() {
     return (
-      <View style={styles.content}>
-        <View>
+      <View style={[styles.content]}>
+        <View style={[BasicStyle.bgWhite]}>
           <Banner></Banner>
           <View style={[styles.bannerTab, styles.helpItem]}>
             <View style={[BasicStyle.flex, BasicStyle.center]}>
@@ -42,11 +42,10 @@ export default class Top extends React.Component {
               <Image source={require('./img/icon-search@3x.png')}></Image>
             </View>
             <View>
-              <Text style={BasicStyle.white}>搜索股票、基金、牛人</Text>
+              <Text style={[BasicStyle.white, styles.searchInput]}>搜索股票、基金、牛人</Text>
             </View>
           </View>
         </View>
-
         {/**/}
         <HotStock/>
 
@@ -57,7 +56,7 @@ export default class Top extends React.Component {
 
 const styles = StyleSheet.create({
   content: {
-    // backgroundColor: 'red'
+    // backgroundColor: 'blue'
   },
   search: {
     position: 'absolute',
@@ -71,6 +70,9 @@ const styles = StyleSheet.create({
     // backgroundColor: 'transparent',
     height: 30,
     // backgroundColor: 'green'
+  },
+  searchInput: {
+    backgroundColor: 'transparent'
   },
   searchBg: {
     position: 'absolute',

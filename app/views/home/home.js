@@ -21,15 +21,25 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <View style={[BasicStyle.flex, BasicStyle.content]}>
+      <View style={[BasicStyle.flex, BasicStyle.content, styles.bg]}>
         <ScrollView style={[BasicStyle.flex]}>
-          <RefreshControl onRefresh={() => this.refreshHandle()} title="正在刷新..."/>
+          <RefreshControl
+            onRefresh={() => this.refreshHandle()}
+            refreshing={this.state.refreshing}
+            title="正在刷新..."/>
           <Top/>
         </ScrollView>
       </View>
     );
   }
 
-  refreshHandle = () => {}
-
+  refreshHandle = () => {
+    // this.setState({refreshing: false});
+  }
 }
+
+const styles = StyleSheet.create({
+  bg: {
+    backgroundColor: '#f1f3f4'
+  }
+});
