@@ -27,7 +27,7 @@ class HotStock extends React.Component {
           .homeHotStock
           .map((item) => {
             return (
-              <View style={[styles.item]}>
+              <View style={[styles.item]} key={item}>
                 <View>
                   <Text>乐视网</Text>
                 </View>
