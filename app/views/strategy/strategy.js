@@ -1,10 +1,12 @@
 import React from 'react';
 import {StyleSheet, Navigator, View, Text, ScrollView} from 'react-native';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 import BasicStyle from '../../styles/basic';
 import Tab from './strategy-tab';
 
-export default class Strategy extends React.Component {
+class Strategy extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +28,28 @@ export default class Strategy extends React.Component {
         <View style={[styles.tab]}>
           <Tab/>
         </View>
-        <View></View>
+        <View>
+          {this.renderTabContent()
+}
+        </View>
       </View>
     );
+  }
+
+  renderTabContent = () => {
+    if (this.props.strategyPage.selectedTab === 1) {
+      return (
+        <View>
+          <Text>点买</Text>
+        </View>
+      );
+    } else {
+      return (
+        <View>
+          <Text>进行中</Text>
+        </View>
+      );
+    }
   }
 
 }
@@ -40,3 +61,9 @@ const styles = StyleSheet.create({
 
   }
 });
+
+function mapStateToProps(state) {
+  return {strategyPage: state.strategyPage};
+}
+
+export default connect(mapStateToProps)(Strategy);
