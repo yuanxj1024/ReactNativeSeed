@@ -25,12 +25,12 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <View style={[BasicStyle.flex, BasicStyle.content]}>
+      <View style={[BasicStyle.flex, styles.bg]}>
         <View style={[styles.headerWrap]}>
           <SearchBar/>
         </View>
-        <View style={[BasicStyle.flex, BasicStyle.bg]}>
-          <ScrollView style={[BasicStyle.flex]}>
+        <View style={[BasicStyle.flex, styles.bg]}>
+          <ScrollView style={[BasicStyle.flex, BasicStyle.bg]}>
             <RefreshControl
               onRefresh={() => this.refreshHandle()}
               refreshing={this.state.refreshing}
@@ -52,13 +52,12 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   bg: {
-    // backgroundColor: '#f1f3f4'
     backgroundColor: 'transparent'
   },
   headerWrap: {
     // backgroundColor: 'transparent',
     backgroundColor: '#f36369',
-    height: 45,
-    // opacity: 0.7
+    // backgroundColor: 'rgba(0,0,0,0)',
+    height: 60
   }
 });

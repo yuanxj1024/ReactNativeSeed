@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-  console.log('mapStateToProps', state);
   return {homeHotStock: state.homePage.homeHotStock};
 }
 

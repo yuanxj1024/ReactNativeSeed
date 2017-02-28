@@ -10,7 +10,7 @@ export default class Layout extends React.Component {
   constructor(arg) {
     super(arg);
     this.state = {
-      currentTab: 'home'
+      currentTab: 'strategy'
     };
   }
   render() {
