@@ -33,7 +33,7 @@ const SubItem = (props) => {
           <Text style={[BasicStyle.color999, styles.itemSubName]}>4500股</Text>
         </View>
       </View>
-      <View>
+      <View style={[styles.itemCell3]}>
         <View>
           <Text>123.34</Text>
         </View>
@@ -140,5 +140,9 @@ const styles = StyleSheet.create({
   itemBtnTxt: {
     fontSize: 14,
     color: '#3194ff'
+  },
+  itemCell3: {
+    position: 'relative',
+    marginTop: -3
   }
 });
