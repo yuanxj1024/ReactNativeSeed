@@ -39,6 +39,9 @@ const Basic = StyleSheet.create({
   bgWhite: {
     backgroundColor: '#fff'
   },
+  bg: {
+    backgroundColor: '#f1f3f4'
+  },
   marginTop: {
     marginTop: 10
   },

@@ -15,7 +15,7 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={[BasicStyle.flex, styles.container]}>
         <View style={[styles.search]}>
           <Image style={styles.searchBg} source={require('./img/searchbg@3x.png')}></Image>
           <View style={[BasicStyle.flexRow, styles.searchBar]}>
@@ -33,6 +33,10 @@ export default class SearchBar extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'red',
+    backgroundColor: 'transparent'
+  },
   search: {
     position: 'absolute',
     top: 0,
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 15,
     marginRight: 15,
-    // backgroundColor: 'transparent',
+    backgroundColor: 'transparent',
     height: 30,
     // backgroundColor: 'green'
   },

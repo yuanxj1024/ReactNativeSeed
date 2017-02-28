@@ -40,7 +40,8 @@ export default class Top extends React.Component {
 
 const styles = StyleSheet.create({
   content: {
-    // backgroundColor: 'blue'
+    position: 'relative',
+    // marginTop: -45 backgroundColor: 'blue'
   },
   bannerTab: {
     // flex: 1,
