@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 
 import BasicStyle from '../../styles/basic';
 import Tab from './strategy-tab';
+import TabBuy from './tab-buy';
 
 class Strategy extends React.Component {
   constructor(props) {
@@ -38,11 +39,7 @@ class Strategy extends React.Component {
 
   renderTabContent = () => {
     if (this.props.strategyPage.selectedTab === 1) {
-      return (
-        <View>
-          <Text>点买</Text>
-        </View>
-      );
+      return (<TabBuy/>);
     } else {
       return (
         <View>
