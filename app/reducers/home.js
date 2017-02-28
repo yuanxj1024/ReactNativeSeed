@@ -5,7 +5,6 @@ const initState = {
 };
 
 export default(state = initState, action) => {
-  console.log('reducers action', action);
   switch (action.type) {
     case ActionTypes.FETCH_HOME_BANNER:
       return Object.assign({}, state, action.data);

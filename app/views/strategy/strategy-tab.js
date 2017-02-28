@@ -4,15 +4,16 @@
 
 import React from 'react';
 import {StyleSheet, View, Text, TouchableWithoutFeedback} from 'react-native';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
 import BasicStyle from '../../styles/basic';
 
-export default class StrategyTab extends React.Component {
+import {setStrategyTabIndex} from '../../actions/strategy';
+
+class StrategyTab extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      currentTab: 1
-    };
   }
 
   render() {
@@ -42,7 +43,7 @@ export default class StrategyTab extends React.Component {
   }
 
   renderSelectedTabFlag(flag) {
-    if (flag === this.state.currentTab) {
+    if (flag === this.props.selectedTab) {
       return (
         <View style={[styles.flag, styles.flagSelected]}></View>
       );
@@ -52,8 +53,11 @@ export default class StrategyTab extends React.Component {
     );
   }
 
-  tabSelected(index) {
-    this.setState({currentTab: index});
+  tabSelected = (index) => {
+    this
+      .props
+      .actions
+      .setStrategyTabIndex({selectedTab: index});
   }
 }
 
@@ -74,3 +78,17 @@ const styles = StyleSheet.create({
   }
 
 });
+
+function mapStateToProps(state) {
+  return {selectedTab: state.strategyPage.selectedTab};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({
+      setStrategyTabIndex
+    }, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StrategyTab);
