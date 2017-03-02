@@ -4,7 +4,7 @@
 import React from 'react';
 import {StyleSheet, Image, View, Text, TextInput} from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 import Banner from './banner';
 
@@ -27,7 +27,7 @@ export default class Top extends React.Component {
             </View>
             <View style={[BasicStyle.flex, BasicStyle.center]}>
               <View style={[BasicStyle.flexRow, BasicStyle.center]}>
-                <Image style={styles.helpIcon} source={require('./img/wenti2@3x.png')}></Image>
+                <Image style={styles.helpIcon} source={require('./img/wenti.png')}></Image>
                 <Text>常见问题</Text>
               </View>
             </View>

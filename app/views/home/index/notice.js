@@ -5,7 +5,7 @@
 import React from 'react';
 import {StyleSheet, View, ListView, Text, Image} from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 const NoticeItem = (props) => {
   return (
@@ -45,7 +45,7 @@ export default class Notice extends React.Component {
           <View style={[styles.headerItem, styles.headerItemLeft]}>
             <Text style={[styles.headerMore]}>更多公告
 
-              <Image source={require('./img/arrow-right@3x.png')}></Image>
+              <Image source={require('./img/arrow-right.png')}></Image>
             </Text>
           </View>
         </View>

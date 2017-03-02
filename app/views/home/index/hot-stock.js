@@ -6,8 +6,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import BasicStyle from '../../styles/basic';
-import {fetchHotStock} from '../../actions/home';
+import BasicStyle from '../../../styles/basic';
+import {fetchHotStock} from '../../../actions/home';
 
 class HotStock extends React.Component {
   constructor(props) {

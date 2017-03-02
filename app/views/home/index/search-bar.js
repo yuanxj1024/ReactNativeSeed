@@ -5,7 +5,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 export default class SearchBar extends React.Component {
 
@@ -17,10 +17,10 @@ export default class SearchBar extends React.Component {
     return (
       <View style={[BasicStyle.flex, styles.container]}>
         <View style={[styles.search]}>
-          <Image style={styles.searchBg} source={require('./img/searchbg@3x.png')}></Image>
+          <Image style={styles.searchBg} source={require('./img/search-bg.png')}></Image>
           <View style={[BasicStyle.flexRow, styles.searchBar, styles.bg]}>
             <View style={[styles.searchIcon]}>
-              <Image source={require('./img/icon-search@3x.png')}></Image>
+              <Image source={require('./img/icon-search.png')}></Image>
             </View>
             <View>
               <Text style={[BasicStyle.white, styles.searchInput]}>搜索股票、基金、牛人</Text>

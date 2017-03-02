@@ -11,7 +11,7 @@ import {
   Image
 } from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 const SubItem = (props) => {
   return (
@@ -80,7 +80,7 @@ export default class HotBuy extends React.Component {
           </View>
           <View style={[styles.headerItem, styles.headerItemLeft]}>
             <Text style={[styles.headerMore]}>更多公告
-              <Image source={require('./img/arrow-right@3x.png')}></Image>
+              <Image source={require('./img/arrow-right.png')}></Image>
             </Text>
           </View>
         </View>

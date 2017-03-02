@@ -8,7 +8,7 @@ import {
   RefreshControl
 } from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 import Top from './top';
 import Notice from './notice';
