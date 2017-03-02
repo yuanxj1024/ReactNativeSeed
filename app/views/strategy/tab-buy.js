@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import BasicStyle from '../../styles/basic';
+import SearchBar from './search-bar';
 
 class TabBuy extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class TabBuy extends React.Component {
     return (
       <ScrollView>
         <View>
+          <SearchBar/>
           <Text>11111111111</Text>
         </View>
       </ScrollView>
