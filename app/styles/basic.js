@@ -50,6 +50,9 @@ const Basic = StyleSheet.create({
   },
   fontWeight: {
     fontWeight: 'bold'
+  },
+  fontSize10: {
+    fontSize: 10
   }
 });
 
