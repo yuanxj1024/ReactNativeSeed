@@ -7,7 +7,7 @@ import {StyleSheet, View, Text, Image, ScrollView} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 import SearchBar from './search-bar';
 import HotStock from './hot-stock';
 

@@ -7,9 +7,9 @@ import {StyleSheet, View, Text, TouchableWithoutFeedback} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
-import {setStrategyTabIndex} from '../../actions/strategy';
+import {setStrategyTabIndex} from '../../../actions/strategy';
 
 class StrategyTab extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import {StyleSheet, Navigator, View, Text, ScrollView} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 import Tab from './strategy-tab';
 import TabBuy from './tab-buy';
 

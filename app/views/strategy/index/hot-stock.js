@@ -4,7 +4,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, ScrollView} from 'react-native';
 
-import BasicStyle from '../../styles/basic';
+import BasicStyle from '../../../styles/basic';
 
 export default class HotStock extends React.Component {
   constructor(props) {

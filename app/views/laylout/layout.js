@@ -3,7 +3,7 @@ import {StyleSheet, Navigator, View, Image} from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
 import HomeView from '../home/home';
-import StrategyView from '../strategy/strategy';
+import StrategyView from '../strategy/index/strategy';
 import MineView from '../mine/mine';
 
 export default class Layout extends React.Component {
