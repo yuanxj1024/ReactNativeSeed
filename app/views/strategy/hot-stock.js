@@ -36,9 +36,9 @@ export default class HotStock extends React.Component {
                 .list
                 .map((item) => {
                   return (
-                    <View style={[styles.item, BasicStyle.flex, BasicStyle.center]}>
+                    <View style={[styles.item, BasicStyle.flex, BasicStyle.center]} key={item}>
                       <View>
-                        <Text style={[styles.stockName]}>贵州茅台</Text>
+                        <Text style={[styles.stockName]}>贵州茅台{item}</Text>
                       </View>
                       <View>
                         <Text style={[styles.stockNum, styles.green]}>234.43</Text>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   },
   stockSub: {
     flexDirection: 'row',
-    fontSize: 10
+    // fontSize: 10
   },
   marginRight: {
     marginRight: 10
