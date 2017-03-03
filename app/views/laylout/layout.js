@@ -14,7 +14,6 @@ export default class Layout extends React.Component {
     };
   }
   render() {
-    console.log(1);
     return (
       <TabNavigator>
         <TabNavigator.Item

@@ -22,7 +22,6 @@ class TabBuy extends React.Component {
         <View>
           <SearchBar/>
           <HotStock/>
-          <Text>11111111111</Text>
         </View>
       </ScrollView>
     );
