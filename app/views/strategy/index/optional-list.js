@@ -62,7 +62,7 @@ export default class OptionalList extends React.Component {
                     {this.renderColorNum(item)}
                   </View>
                   <View>
-                    <TouchableOpacity style={[styles.bg, styles.btnWrap]}>
+                    <TouchableOpacity>
                       {this.renderButton(item)}
                     </TouchableOpacity>
                   </View>
