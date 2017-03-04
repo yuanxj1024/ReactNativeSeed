@@ -10,6 +10,7 @@ import {bindActionCreators} from 'redux';
 import BasicStyle from '../../../styles/basic';
 import SearchBar from './search-bar';
 import HotStock from './hot-stock';
+import OptionalList from './optional-list';
 
 class TabBuy extends React.Component {
   constructor(props) {
@@ -19,13 +20,19 @@ class TabBuy extends React.Component {
   render() {
     return (
       <ScrollView>
-        <View>
-          <SearchBar/>
+        <View style={[BasicStyle.flex, styles.scroll]}>
           <HotStock/>
+          <OptionalList/>
         </View>
       </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  scroll: {
+    marginBottom: 60
+  }
+});
 
 export default connect()(TabBuy);

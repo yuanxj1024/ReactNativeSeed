@@ -24,7 +24,7 @@ export default class HotStock extends React.Component {
 
   render() {
     return (
-      <View style={[styles.container]}>
+      <View style={[styles.container, BasicStyle.bgWhite]}>
         <View style={[styles.title]}>
           <Text>热门股票</Text>
         </View>

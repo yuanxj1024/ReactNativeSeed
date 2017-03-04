@@ -36,6 +36,12 @@ const Basic = StyleSheet.create({
   color666: {
     color: '#666666'
   },
+  colorRed: {
+    color: '#f36369'
+  },
+  colorGreen: {
+    color: '#1aac1a'
+  },
   bgWhite: {
     backgroundColor: '#fff'
   },
@@ -53,6 +59,9 @@ const Basic = StyleSheet.create({
   },
   fontSize10: {
     fontSize: 10
+  },
+  fontSize16: {
+    fontSize: 16
   }
 });
 

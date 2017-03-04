@@ -25,7 +25,7 @@ class Strategy extends React.Component {
 
   render() {
     return (
-      <View style={[BasicStyle.flex]}>
+      <View style={[BasicStyle.flex, BasicStyle.bg]}>
         <View style={[styles.tab]}>
           <Tab/>
         </View>
